@@ -456,11 +456,13 @@ void SearchFeature2(char* image, size_t size) {
 	printf_head_result_map(result_map);
 }
 
-
 void SearchFeature3(const char* image, size_t image_size) {
 
 	char feature_text_modulelayout[] = {
 		'm', 'o', 'd', 'u', 'l', 'e', '_', 'l', 'a', 'y', 'o', 'u', 't', '\0',
+	};
+	char feature_text_disagrees_about_version_of_symbol[] = {
+		'd', 'i', 's', 'a', 'g', 'r', 'e', 'e', 's', ' ', 'a', 'b', 'o', 'u', 't', ' ',  'v', 'e', 'r', 's', 'i', 'o', 'n', ' ', 'o', 'f', ' ', 's', 'y', 'm', 'b', 'o', 'l'
 	};
 	size_t modulelayout_text_offset = 0;
 
@@ -468,7 +470,7 @@ void SearchFeature3(const char* image, size_t image_size) {
 		const char* paddr = image + offset;
 		if ((image_size - offset) >= sizeof(feature_text_modulelayout)) {
 			if (modulelayout_text_offset == 0 && memcmp(paddr, &feature_text_modulelayout, sizeof(feature_text_modulelayout)) == 0) {
-				printf("module layout text->0x%p\n", (void*)offset);
+				printf("module layout text addr->0x%p\n", (void*)offset);
 				modulelayout_text_offset = offset;
 			}
 		}
@@ -476,17 +478,27 @@ void SearchFeature3(const char* image, size_t image_size) {
 			break;
 		}
 	}
+
+	for (size_t offset = 0; offset < image_size; offset++) {
+		const char* paddr = image + offset;
+		if ((image_size - offset) >= sizeof(feature_text_disagrees_about_version_of_symbol)) {
+			if (memcmp(paddr, &feature_text_disagrees_about_version_of_symbol, sizeof(feature_text_disagrees_about_version_of_symbol)) == 0) {
+				printf("disagrees_about_version_of_symbol text addr->0x%p\n", (void*)offset);
+				break;
+			}
+		}
+	}
+
 	if (!modulelayout_text_offset) {
 		printf("[ERROR] text offset empty.\n");
 		return;
 	}
+
 	std::map<std::tuple<std::string, size_t>, std::shared_ptr<std::vector<xrefs_info>>> result_map;
 	result_map[{"load_module function", modulelayout_text_offset}] = std::make_shared<std::vector<xrefs_info>>();
 	find_xrefs_link((const char*)image, image_size, result_map);
 	printf_xrefs_result_map(result_map);
 }
-
-
 
 void TestModuleSignature(char* image, size_t size) {
 	const char* lpszFlag = "Module signature appended";
