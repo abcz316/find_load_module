@@ -4,6 +4,14 @@
 #include "base_func.h"
 #include "analyze_kernel.h"
 
+bool check_file_path(const char* file_path) {
+	size_t len = strlen(file_path);
+	if (len > 4 && strcmp(file_path + len - 4, ".img") == 0) {
+		return false;
+	}
+	return true;
+}
+
 int main(int argc, char* argv[]) {
 	++argv;
 	--argc;
@@ -16,6 +24,14 @@ int main(int argc, char* argv[]) {
 		return 0;
 	}
 	const char* file_path = argv[0];
+	
+	if (!check_file_path(file_path)) {
+		std::cout << "Please enter the correct Linux kernel binary file path. " << std::endl;
+		std::cout << "For example, if it is boot.img, you need to first decompress boot.img and then extract the kernel file inside." << std::endl;
+		system("pause");
+		return 0;
+	}
+	
 	std::vector<char> file_buf = read_file_buf(file_path);
 	if (!file_buf.size()) {
 		std::cout << "Fail to open file:" << file_path << std::endl;
