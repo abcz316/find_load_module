@@ -1,0 +1,3 @@
+[submodule "SKRoot-linuxKernelRoot"]
+	path = SKRoot-linuxKernelRoot
+	url = https://github.com/abcz316/SKRoot-linuxKernelRoot

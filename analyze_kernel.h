@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "kernel_symbol_parser.h"
+#include "SKRoot-linuxKernelRoot\patch_kernel_root\kernel_symbol_parser.h"
 #include <iostream>
 #include <vector>
 

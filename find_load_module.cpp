@@ -1,7 +1,7 @@
 ﻿// patch_kernel_root.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
-#include "base_func.h"
+#include "SKRoot-linuxKernelRoot\patch_kernel_root\ase_func.h"
 #include "analyze_kernel.h"
 
 bool check_file_path(const char* file_path) {
