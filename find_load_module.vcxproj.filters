@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="SKRoot-linuxKernelRoot">
+      <UniqueIdentifier>{f629175a-e7df-402c-844d-ad8d6cc01ac7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SKRoot-linuxKernelRoot\patch_kernel_root">
+      <UniqueIdentifier>{e8323717-4147-490d-8c32-3dd33eb7c1ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze">
+      <UniqueIdentifier>{53c16c2a-25c1-4cfe-b97b-4cc3b7ba7860}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="find_load_module.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="symbol_analyze.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name.cpp">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClCompile>
+    <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_4_6_0.cpp">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClCompile>
+    <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_1_42.cpp">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClCompile>
+    <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_1_60.cpp">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClCompile>
+    <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_6_30.cpp">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClCompile>
+    <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kernel_symbol_parser.cpp">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClCompile>
+    <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kernel_version_parser.cpp">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="symbol_analyze.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="base_func.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name.h">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClInclude>
+    <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_4_6_0.h">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClInclude>
+    <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_1_42.h">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClInclude>
+    <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_1_60.h">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClInclude>
+    <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_6_30.h">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClInclude>
+    <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kernel_symbol_parser.h">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClInclude>
+    <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kernel_version_parser.h">
+      <Filter>SKRoot-linuxKernelRoot\patch_kernel_root\analyze</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
