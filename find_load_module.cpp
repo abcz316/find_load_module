@@ -3,13 +3,10 @@
 
 #include "base_func.h"
 #include "symbol_analyze.h"
+#include <filesystem>
 
 bool check_file_path(const char* file_path) {
-	size_t len = strlen(file_path);
-	if (len > 4 && strcmp(file_path + len - 4, ".img") == 0) {
-		return false;
-	}
-	return true;
+	return std::filesystem::path(file_path).extension() != ".img";
 }
 
 int main(int argc, char* argv[]) {
