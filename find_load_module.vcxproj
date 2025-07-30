@@ -159,7 +159,7 @@
     <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_4_6_0.cpp" />
     <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_1_42.cpp" />
     <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_1_60.cpp" />
-    <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_6_30.cpp" />
+    <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_4_0.cpp" />
     <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kernel_symbol_parser.cpp" />
     <ClCompile Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kernel_version_parser.cpp" />
     <ClCompile Include="symbol_analyze.cpp" />
@@ -170,7 +170,7 @@
     <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_4_6_0.h" />
     <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_1_42.h" />
     <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_1_60.h" />
-    <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_6_30.h" />
+    <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kallsyms_lookup_name_6_4_0.h" />
     <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kernel_symbol_parser.h" />
     <ClInclude Include="SKRoot-linuxKernelRoot\patch_kernel_root\analyze\kernel_version_parser.h" />
     <ClInclude Include="symbol_analyze.h" />
